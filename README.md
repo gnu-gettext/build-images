@@ -1,6 +1,6 @@
 # Building images for building and testing GNU gettext
 
-This gettext sub-project generates and pushes to ghcr.io
+This gettext sub-project generates and pushes to `ghcr.io`
 docker registry the docker images to be used for compiling the
 master branch of gettext and gnulib.
 
