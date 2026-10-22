@@ -44,6 +44,22 @@ RUN apt update \
                    lua5.4 \
                    gjs \
                    valac \
+    && : "Additional packages for the oss-scanner project" \
+    && apt install -y --no-install-recommends \
+                   build-essential \
+                   clang \
+                   gdb \
+                   strace \
+                   ltrace \
+                   valgrind \
+                   lsof \
+                   file \
+                   xxd \
+                   jq \
+                   netcat-openbsd \
+                   python3-venv python3-pip \
+                   pkg-config \
+                   cmake \
     && : "After this line, no more 'apt' commands will work." \
     && rm -rf /var/lib/apt/lists/* \
     && localedef -i ar_SA -f ISO-8859-6 ar_SA.ISO-8859-6 \
