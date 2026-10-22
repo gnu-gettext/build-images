@@ -6,8 +6,8 @@ name: Build and Publish Docker Image
 
 on:
   # Rebuild after each push to the master branch.
-  push:
-    branches: ["master"]
+  #push:
+  #  branches: ["master"]
   # Allow rebuilding manually from the GitHub UI.
   workflow_dispatch:
 
@@ -47,3 +47,11 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+
+# After running this action:
+# 1. Visit https://github.com/orgs/gnu-gettext/packages
+# 2. Select the just-created image.
+# 3. Click on "Package settings".
+# 4. Under "Danger zone", "Change package visibility" > Public.
+# 5. Verify:
+#    $ docker pull ghcr.io/gnu-gettext/build-images/from-ubuntu24.04:latest

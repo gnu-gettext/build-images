@@ -2,7 +2,7 @@
 
 FROM ubuntu:24.04
 
-LABEL maintainer "Bruno Haible <bruno@clisp.org>"
+LABEL maintainer="Bruno Haible <bruno@clisp.org>"
 
 ENV DEBIAN_FRONTEND=noninteractive
 
